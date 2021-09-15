@@ -6,13 +6,13 @@ Settings:
   tokenPath: "/home/pi/Documents/Secret/.tokenIUB"
   
   #The url that handles the api requests
-  urlHandler: "https://iceuploadbank.altervista.org/api.php"
+  urlHandler: "https://iceuploadbank.ddns.net"
   
   #The accuracy level on logging
   logLevel: "INFO"
   
   #Number of files to upload per request
-  upload_per_request: 5
+  upload_per_request: 4
   
   #The list of material to upload
-  material_list: ['movie']
+  material_list: ['film', 'serietv']

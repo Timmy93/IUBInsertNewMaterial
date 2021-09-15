@@ -13,7 +13,7 @@ import json
 import requests
 from pprint import pprint
 import time
-from ApiHandler import ApiHandler
+from ApiHandler import *
 import yaml
 
 #Check if the given path is an absolute path
@@ -32,7 +32,7 @@ def main():
 	#Load config
 	with open(createAbsolutePath(configFile), 'r') as stream:
 		try:
-			config = yaml.load(stream)
+			config = yaml.safe_load(stream)
 			#Info from yaml configuration file
 			username = config['Settings']['username']
 			tokenPath = createAbsolutePath(config['Settings']['tokenPath'])
@@ -43,8 +43,8 @@ def main():
 			logging.getLogger().setLevel(logLevel)
 			logging.info('Loaded settings started')
 		except yaml.YAMLError as exc:
-			print("Cannot load file: ["+configFile+"] - Error: "+exc)
-			logging.error("Cannot load file: ["+configFile+"] - Error: "+exc)
+			print("Cannot load file: ["+configFile+"] - Error: "+str(exc))
+			logging.error("Cannot load file: ["+configFile+"] - Error: "+str(exc))
 			exit()
 
 	#Creates handler to send request to the backend site
