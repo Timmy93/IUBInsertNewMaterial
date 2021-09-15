@@ -1,4 +1,4 @@
-Settings:
+GlobalSettings:
   #The username that uses the token
   username: "admin"
   
