@@ -1,0 +1,18 @@
+Settings:
+  #The username that uses the token
+  username: "admin"
+  
+  #The path to the file where is stored the token
+  tokenPath: "/path/to/my/Secret/.tokenIUB"
+  
+  #The url that handles the api requests
+  urlHandler: "https://mySite/api.php"
+  
+  #The accuracy level on logging
+  logLevel: "INFO"
+  
+  #Number of files to upload per request
+  upload_per_request: 5
+  
+  #The list of material to upload
+  material_list: ['film']
